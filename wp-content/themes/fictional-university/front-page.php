@@ -39,7 +39,6 @@ echo date('mdY');
         $homepageEvents->the_post();
       ?>
 
-      <?php echo get_field('event_date') . ", " .  $today;?> 
         <div class="event-summary">
           <a class="event-summary__date t-center" href="#">
             <span class="event-summary__month"><?php
