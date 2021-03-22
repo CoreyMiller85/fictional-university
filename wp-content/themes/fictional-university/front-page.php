@@ -1,6 +1,5 @@
 <?php
 get_header();
-echo date('mdY');
 ?>
 
 <div class="page-banner">
@@ -31,14 +30,15 @@ echo date('mdY');
             'key' => 'event_date',
             'compare' => '>=',
             'value' => $today,
+            'type' => 'DATE'
           )
         )
-        ));
-         
+      ));
+
       while ($homepageEvents->have_posts()) {
         $homepageEvents->the_post();
       ?>
-
+        <?php echo get_field('event_date'); ?>
         <div class="event-summary">
           <a class="event-summary__date t-center" href="#">
             <span class="event-summary__month"><?php
