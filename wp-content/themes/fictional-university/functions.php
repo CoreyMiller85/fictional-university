@@ -32,6 +32,10 @@ function university_adjust_queries($query)
     $query->set('order', 'ASC');
     $query->set('meta_query', $meta_query);
   }
+  if (!is_admin() and is_post_type_archive('program') and $query->is_main_query()) {
+    $query->set('orderby', 'title');
+    $query->set('order', 'ASC');
+  }
 }
 
 add_action('pre_get_posts', 'university_adjust_queries');
