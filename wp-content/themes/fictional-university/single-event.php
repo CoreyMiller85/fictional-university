@@ -27,15 +27,15 @@ while (have_posts()) {
       echo '<h2 class="headline headline--medium">Related Program(s)</h2>';
       echo '<ul class="link-list min-list">';
       foreach ($relatedPrograms as $program) {
-        ?>
-        
+    ?>
+
         <li><a href="<?php echo get_the_permalink($program) ?>"><?php echo get_the_title($program) ?></a></li>
-        
-        <?php
+
+    <?php
       }
       echo '</ul>';
     }
-  
+
     ?>
   </div>
 

@@ -34,7 +34,7 @@ register_post_type('program', array(
     'all_items' => 'All Programs',
     'singular_name' => 'Program'
   ),
-  'menu_icon' => 'dashicons-awards' 
+  'menu_icon' => 'dashicons-awards ' 
 ));
 
 }
